@@ -22,8 +22,6 @@ public class PlayerMovement : MonoBehaviour
         LookAt(mousePos);
 
         velocity = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized * moveSpeed;
-
-        Debug.Log(velocity);
     }
 
     private void FixedUpdate()
@@ -33,15 +31,18 @@ public class PlayerMovement : MonoBehaviour
 
     private void LookAt(Vector2 p2)
     {
-        float forwardAngle = 0;
         Vector2 p1 = transform.position;
         float opp = p2.y - p1.y;
         float adj = p2.x - p1.x;
-        float zRadians = Mathf.Atan((p2.y - p1.y) / (p2.x - p1.x));
+        float zRadians = Mathf.Atan(opp / adj);
+
         if (adj < 0)
+        {
             zRadians += Mathf.PI;
+        }
+
         Quaternion q = Quaternion.Euler(0, 0, Mathf.Rad2Deg * zRadians);
         transform.rotation = q;
-        transform.Rotate(0, 0, -forwardAngle);
+        transform.Rotate(0, 0, - 90);
     }
 }
