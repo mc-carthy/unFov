@@ -7,6 +7,7 @@ public class FieldOfView : MonoBehaviour
     public float viewRadius;
     [Range(0, 360)]
     public float viewAngle;
+    public float meshResolution;
 
     public List<Transform> visibleTargets = new List<Transform>();
     public LayerMask enemyMask;
@@ -16,6 +17,11 @@ public class FieldOfView : MonoBehaviour
     private void Start()
     {
         StartCoroutine(FindTargetWithDelay(delay));
+    }
+
+    private void Update()
+    {
+        DrawFieldOfView();
     }
 
     private IEnumerator FindTargetWithDelay(float delay)
@@ -45,6 +51,18 @@ public class FieldOfView : MonoBehaviour
                     visibleTargets.Add(targetXForm);
                 }
             }
+        }
+    }
+
+    private void DrawFieldOfView()
+    {
+        int stepCount = Mathf.RoundToInt(viewAngle * meshResolution);
+        float stepAngleSize = viewAngle / stepCount;
+
+        for (int i = 0; i <= stepCount; i++)
+        {
+            float angle = -transform.eulerAngles.z - (viewAngle / 2f) + (stepAngleSize * i);
+            Debug.DrawLine(transform.position, transform.position + (Vector3)DirFromAngle(angle, true) * viewRadius, Color.red);
         }
     }
 
