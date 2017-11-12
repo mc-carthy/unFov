@@ -120,7 +120,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 7674762}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: enemies
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -153,7 +153,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 53102404}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: enemy (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -184,7 +184,7 @@ GameObject:
   - component: {fileID: 110170467}
   - component: {fileID: 110170469}
   - component: {fileID: 110170468}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: obstacle (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -283,7 +283,7 @@ GameObject:
   - component: {fileID: 145259835}
   - component: {fileID: 145259836}
   - component: {fileID: 145259837}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -372,7 +372,7 @@ GameObject:
   - component: {fileID: 155739621}
   - component: {fileID: 155739622}
   - component: {fileID: 155739623}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -461,7 +461,7 @@ GameObject:
   - component: {fileID: 266420924}
   - component: {fileID: 266420925}
   - component: {fileID: 266420926}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -548,7 +548,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 278108869}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -579,7 +579,7 @@ GameObject:
   - component: {fileID: 356799978}
   - component: {fileID: 356799980}
   - component: {fileID: 356799979}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: obstacle (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -751,7 +751,7 @@ GameObject:
   - component: {fileID: 525666163}
   - component: {fileID: 525666164}
   - component: {fileID: 525666165}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -838,7 +838,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 624457489}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: obstacles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -873,7 +873,7 @@ GameObject:
   - component: {fileID: 876017428}
   - component: {fileID: 876017430}
   - component: {fileID: 876017429}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: obstacle (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1050,7 +1050,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1318345605}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: enemy (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1079,7 +1079,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1353826157}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: enemy (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1110,7 +1110,7 @@ GameObject:
   - component: {fileID: 1378667643}
   - component: {fileID: 1378667645}
   - component: {fileID: 1378667644}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: obstacle (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1207,7 +1207,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1423958399}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: enemy (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1292,8 +1292,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68d451d783aa0447ba27bd22bafe92fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  viewRadius: 0
-  viewAngle: 0
+  viewRadius: 6.3
+  viewAngle: 89
+  visibleTargets: []
+  enemyMask:
+    serializedVersion: 2
+    m_Bits: 256
+  obstacleMask:
+    serializedVersion: 2
+    m_Bits: 512
+  delay: 0.2
 --- !u!58 &1699858139
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1331,7 +1339,7 @@ GameObject:
   - component: {fileID: 1857854105}
   - component: {fileID: 1857854106}
   - component: {fileID: 1857854107}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1420,7 +1428,7 @@ GameObject:
   - component: {fileID: 1892486196}
   - component: {fileID: 1892486197}
   - component: {fileID: 1892486198}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: obstacle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
